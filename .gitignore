@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Personal data — never commit: this is a CV and it may end up in a public
+# or shared repo. jobs.db is fine to commit (public listings only, and is
+# what the GitHub Actions cron workflow refreshes and pushes back).
+src/job_aggregator/storage/cv_profile.json
+
+# Editor/OS/tool cruft
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+

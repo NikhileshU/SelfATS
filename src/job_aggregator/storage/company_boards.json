@@ -1,0 +1,5 @@
+{
+  "greenhouse": ["gitlab", "stripe", "airbnb", "coinbase", "airtable", "asana", "discord", "figma", "reddit", "robinhood"],
+  "lever": ["gopuff", "stackblitz", "palantir"],
+  "ashby": ["ramp", "linear", "vanta", "openai", "deel", "mercury", "posthog", "supabase", "clickhouse"]
+}
