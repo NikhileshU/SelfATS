@@ -1,0 +1,18 @@
+{
+  "name": "selfats",
+  "owner": {
+    "name": "Nikhilesh Upreti",
+    "email": "nikhilesh.upreti01@gmail.com"
+  },
+  "metadata": {
+    "description": "Personal marketplace for the job-aggregator MCP plugin",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "job-aggregator",
+      "source": "./",
+      "description": "CV-matched, multi-source job discovery MCP server: aggregates open job boards into a local SQLite cache, scores listings against your CV, and drafts applications with per-listing confirmation."
+    }
+  ]
+}
