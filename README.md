@@ -17,6 +17,19 @@ uv sync
 That installs everything, including two console scripts inside `.venv`:
 `job-aggregator-mcp` (the server) and `job-aggregator-refresh` (CLI cache refresh).
 
+## Add to Claude Code (as a plugin)
+
+The repo doubles as its own single-plugin marketplace:
+
+```
+/plugin marketplace add NikhileshU/SelfATS
+/plugin install job-aggregator@selfats
+```
+
+(The repo is private, so your machine needs GitHub access git can use — `gh auth setup-git` covers that.) The plugin launches the server via `uv run`, so [uv](https://docs.astral.sh/uv/) must be on your PATH; dependencies sync automatically on first run.
+
+Note: installing as a plugin clones a snapshot into `~/.claude/plugins/`, with its own copy of `jobs.db`. The `refresh_cache` tool hits live source APIs directly, so that copy stays fresh without needing plugin updates.
+
 ## Add to Claude Desktop
 
 Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) and add:
