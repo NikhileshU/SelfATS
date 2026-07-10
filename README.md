@@ -30,6 +30,20 @@ The repo doubles as its own single-plugin marketplace:
 
 Note: installing as a plugin clones a snapshot into `~/.claude/plugins/`, with its own copy of `jobs.db`. The `refresh_cache` tool hits live source APIs directly, so that copy stays fresh without needing plugin updates.
 
+## Add to Gemini CLI (as an extension)
+
+The repo also ships a `gemini-extension.json`, so [Gemini CLI](https://github.com/google-gemini/gemini-cli) users can install it directly:
+
+```
+gemini extensions install https://github.com/NikhileshU/SelfATS
+```
+
+Requires `uv` on PATH (same as the Claude paths). One behavioral difference:
+the LLM-assisted fit-scoring pass uses MCP sampling, which Gemini CLI may not
+support — scoring then falls back to heuristics automatically (title/skill
+keyword match, years-gate regex, stage keywords). All tools otherwise work
+identically.
+
 ## Add to Claude Desktop
 
 Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) and add:

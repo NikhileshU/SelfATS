@@ -1,0 +1,13 @@
+{
+  "name": "job-aggregator",
+  "version": "0.1.0",
+  "description": "CV-matched, multi-source job discovery: aggregates HN Who's Hiring, RemoteOK, Remotive, We Work Remotely, and Greenhouse/Lever/Ashby boards into a local SQLite cache, scores listings against your CV, and drafts applications (never auto-submits).",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "job-aggregator": {
+      "command": "uv",
+      "args": ["run", "--directory", "${extensionPath}", "job-aggregator-mcp"],
+      "cwd": "${extensionPath}"
+    }
+  }
+}
